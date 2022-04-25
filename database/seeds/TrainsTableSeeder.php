@@ -18,9 +18,8 @@ class TrainsTableSeeder extends Seeder
 
             $train = new Train(); 
 
-            $aziende = ['Trenitalia', 'Trenord', 'Italo', 'Thello', ];
-            // $dt = $faker->dateTimeBetween($startDate = 'now', $endDate = '+2 weeks');
-            // $date = $dt->format("Y-m-d"); 
+            $aziende = ['Amtrak', 'Central Railway', 'Southern Railway', 'Northern Railway', ];
+             // will give you only Australian states
 
             $train->azienda = $faker->randomElement($aziende);
             $train->stazione_di_partenza = $faker->city();
@@ -31,7 +30,7 @@ class TrainsTableSeeder extends Seeder
             $train->orario_di_arrivo = $faker->time();
             $train->codice_treno= $faker->bothify('#####??');
             $train->numero_carrozze = $faker->numberBetween(3,8);
-            $train->prezzo_biglietto = $faker->randomFloat(2,1,1000);
+            $train->prezzo_biglietto = $faker->randomFloat(2,1,300);
            
             $train->save();
         }
