@@ -24,7 +24,7 @@
         border: 2px solid var(--primary-color);
         border-radius: 5px;
 
-        .dettagli-treno{
+        .train-details{
             display: flex;
             justify-content: center;
             gap: 7%;
@@ -33,13 +33,13 @@
             background-color: var(--primary-color);
             color: white;
             
-            .tipo-info{
+            .info-type{
                 color: gainsboro;
                 font-weight: bold;
             }
         }
 
-        .itinerario-treno{
+        .train-schedule{
             display: flex;
             justify-content: space-around;
             width: 100%;
@@ -47,25 +47,25 @@
             padding: 20px 0;
             border-bottom: 2px solid var(--primary-color);
 
-            .partenza, .arrivo{
+            .departure, .arrival{
                 width: 35%;
 
-                .itinerario-info{
+                .schedule-info{
                     margin-bottom: 7px;
 
-                    .tipo-info{
+                    .info-type{
                         color: var(--primary-color);
                     }
                 }
             }
         }
 
-        .prezzo-biglietto{
+        .ticket-price{
             width: 100%;
             text-align: center;
             padding: 20px 0;
 
-            .tipo-info{
+            .info-type{
                 font-weight: bold;
                 color: crimson;
             }

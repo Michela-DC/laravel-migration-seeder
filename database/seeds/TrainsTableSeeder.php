@@ -21,16 +21,18 @@ class TrainsTableSeeder extends Seeder
             $aziende = ['Amtrak', 'Central Railway', 'Southern Railway', 'Northern Railway', ];
              // will give you only Australian states
 
-            $train->azienda = $faker->randomElement($aziende);
-            $train->stazione_di_partenza = $faker->city();
-            $train->stazione_di_arrivo = $faker->city();
-            $train->data_di_partenza = $faker->dateTimeBetween('now', '+2 weeks');
-            $train->orario_di_partenza = $faker->time();
-            $train->data_di_arrivo = $faker->dateTimeBetween('now', '+2 weeks');
-            $train->orario_di_arrivo = $faker->time();
-            $train->codice_treno= $faker->bothify('#####??');
-            $train->numero_carrozze = $faker->numberBetween(3,8);
-            $train->prezzo_biglietto = $faker->randomFloat(2,1,300);
+            $train->company = $faker->randomElement($aziende);
+            $train->departure_station = $faker->city();
+            $train->departure_date = $faker->dateTimeBetween('now', '+2 weeks');
+            $train->departure_time = $faker->time();
+            $train->arrival_station = $faker->city();
+            $train->arrival_date = $faker->dateTimeBetween('now', '+2 weeks');
+            $train->arrival_time = $faker->time();
+            $train->train_code= $faker->bothify('#####??');
+            $train->carriages_number = $faker->numberBetween(3,10);
+            $train->ticket_price = $faker->randomFloat(2,1,300);
+            $train->in_time = $faker->boolean();
+            $train->canceled = $faker->numberBetween(0,1);
            
             $train->save();
         }

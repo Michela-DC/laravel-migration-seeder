@@ -17,56 +17,56 @@
 
                 @foreach($trains as $train)
                     <div class="ticket-wrapper">
-                        <div class="dettagli-treno">
-                            <div class="azienda">
-                                <span class="tipo-info">Compagnia:</span>
-                                {{$train->azienda}}
+                        <div class="train-details">
+                            <div class="company">
+                                <span class="info-type">Company:</span>
+                                {{$train->company}}
                             </div>
-                            <div class="codice-treno">
-                                <span class="tipo-info">Codice treno:</span>
-                                {{$train->codice_treno}}
+                            <div class="train-code">
+                                <span class="info-type">Train code:</span>
+                                {{$train->train_code}}
                             </div>
-                            <div class="numero-carrozze">
-                                <span class="tipo-info">Numero carrozze:</span>
-                                {{$train->numero_carrozze}}
+                            <div class="carriages-number">
+                                <span class="info-type">Carriages number:</span>
+                                {{$train->carriages_number}}
                             </div>
                         </div>
 
-                        <div class="itinerario-treno">
-                            <div class="partenza">
-                                <div class="stazione-partenza itinerario-info">
-                                    <span class="tipo-info">Stazione di partenza: </span>
-                                    {{$train->stazione_di_partenza}}
+                        <div class="train-schedule">
+                            <div class="departure">
+                                <div class="departure-station schedule-info">
+                                    <span class="info-type">Departure station: </span>
+                                    {{$train->departure_station}}
                                 </div>
-                                <div class="data-partenza itinerario-info">
-                                    <span class="tipo-info">Data di partenza: </span>
-                                    {{$train->data_di_partenza}}
+                                <div class="departure-date schedule-info">
+                                    <span class="info-type">Departure date: </span>
+                                    {{$train->departure_date}}
                                 </div>
-                                <div class="orario-partenza itinerario-info">
-                                    <span class="tipo-info">Orario di partenza: </span>
-                                    {{$train->orario_di_partenza}}
+                                <div class="departure-time schedule-info">
+                                    <span class="info-type">Departure time: </span>
+                                    {{$train->departure_time}}
                                 </div>
                             </div>
                             
-                            <div class="arrivo">
-                                <div class="stazione-arrivo itinerario-info">
-                                    <span class="tipo-info">Stazione di arrivo: </span>
-                                    {{$train->stazione_di_arrivo}}
+                            <div class="arrival">
+                                <div class="arrical-station schedule-info">
+                                    <span class="info-type">Arrival station: </span>
+                                    {{$train->arrival_station}}
                                 </div>
-                                <div class="data-arrivo itinerario-info">
-                                    <span class="tipo-info">Data di arrivo: </span>
-                                    {{$train->data_di_arrivo}}
+                                <div class="arrival-date schedule-info">
+                                    <span class="info-type">Arrival date: </span>
+                                    {{$train->arrival_date}}
                                 </div>
-                                <div class="orario-arrivo itinerario-info">
-                                    <span class="tipo-info">Orario di arrivo: </span>
-                                    {{$train->orario_di_arrivo}}
+                                <div class="arrival-time schedule-info">
+                                    <span class="info-type">Arrival time: </span>
+                                    {{$train->arrival_time}}
                                 </div>
                             </div>
                         </div>
 
-                        <div class="prezzo-biglietto">
-                            <span class="tipo-info">Prezzo: </span>
-                            $ {{$train->prezzo_biglietto}}
+                        <div class="ticket-price">
+                            <span class="info-type">Ticket price: </span>
+                            $ {{$train->ticket_price}}
                         </div>
                     </div>
                 @endforeach
