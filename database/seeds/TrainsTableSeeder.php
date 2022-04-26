@@ -18,10 +18,10 @@ class TrainsTableSeeder extends Seeder
 
             $train = new Train(); 
 
-            $aziende = ['Amtrak', 'Central Railway', 'Southern Railway', 'Northern Railway', ];
+            $companies = ['Amtrak', 'Central Railway', 'Southern Railway', 'Northern Railway', ];
              // will give you only Australian states
 
-            $train->company = $faker->randomElement($aziende);
+            $train->company = $faker->randomElement($companies);
             $train->departure_station = $faker->city();
             $train->departure_date = $faker->dateTimeBetween('now', '+2 weeks');
             $train->departure_time = $faker->time();
